@@ -1,32 +1,24 @@
-package com.Project.Ecommerce.Controller;
+package com.cts.eCommerce.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.Project.ProductManagement.Model.Products;
-import com.Project.ProductManagement.Service.ProductService;
+import com.cts.eCommerce.model.Products;
+import com.cts.eCommerce.service.ProductService;
 
 @RestController
-@RequestMapping("/admin")
-public class ProductControllerAdmin {
+@RequestMapping("/user")
+public class ProductControllerUser {
 
     @Autowired
     private ProductService service;
-
-    @PostMapping("/save")
-    public ResponseEntity<String> saveProduct(@RequestBody Products product) {
-        service.save(product);
-        return new ResponseEntity<>("Product saved successfully", HttpStatus.CREATED);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteProduct(@PathVariable Integer id) {
-        service.delete(id);
-        return new ResponseEntity<>("Product deleted successfully", HttpStatus.OK);
-    }
 
     @GetMapping("/home")
     public ResponseEntity<List<Products>> getAllProducts() {

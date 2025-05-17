@@ -1,12 +1,12 @@
-package com.Project.ProductManagement.Service;
+package com.cts.eCommerce.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Project.ProductManagement.Model.Products;
-import com.Project.ProductManagement.Repocitory.ProductRepo;
+import com.cts.eCommerce.model.Products;
+import com.cts.eCommerce.repository.ProductRepo;
 
 @Service
 public class ProductServiceImpl implements ProductService {

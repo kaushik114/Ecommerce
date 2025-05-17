@@ -1,8 +1,8 @@
-package com.Project.ProductManagement.Service;
+package com.cts.eCommerce.service;
 
 import java.util.List;
 
-import com.Project.ProductManagement.Model.Products;
+import com.cts.eCommerce.model.Products;
 
 public interface ProductService {
     List<Products> getAllProducts();

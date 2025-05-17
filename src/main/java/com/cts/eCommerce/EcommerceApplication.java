@@ -1,14 +1,14 @@
-package com.Project.Ecommerce;
+package com.cts.eCommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductManagementApplication {
+public class EcommerceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductManagementApplication.class, args);
-		System.out.println("Kani");
+		SpringApplication.run(EcommerceApplication.class, args);
+		
 	}
 
 }
